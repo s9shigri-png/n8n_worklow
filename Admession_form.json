@@ -12,17 +12,17 @@
         },
         "documentId": {
           "__rl": true,
-          "value": "1XaOypeT98iYZN_OeiO1fpKEm39iQzgeP1HAcnKt5Aqw",
+          "value": "your_document_id",
           "mode": "list",
           "cachedResultName": "Admession form",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1XaOypeT98iYZN_OeiO1fpKEm39iQzgeP1HAcnKt5Aqw/edit?usp=drivesdk"
+          "cachedResultUrl": "your_cached_document_url"
         },
         "sheetName": {
           "__rl": true,
-          "value": 2021132928,
+          "value": "your_sheet_id",
           "mode": "list",
           "cachedResultName": "Below50%",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1XaOypeT98iYZN_OeiO1fpKEm39iQzgeP1HAcnKt5Aqw/edit#gid=2021132928"
+          "cachedResultUrl": "your_cached_sheet_url"
         },
         "event": "rowAdded",
         "options": {}
@@ -33,11 +33,11 @@
         -256,
         0
       ],
-      "id": "97b877ff-1c60-48d6-a166-5507a43511e0",
+      "id": "your_node_id_1",
       "name": "Google Sheets Trigger",
       "credentials": {
         "googleSheetsTriggerOAuth2Api": {
-          "id": "uhiRm3wlbULuIr4A",
+          "id": "your_credential_id_1",
           "name": "Google Sheets Trigger account"
         }
       }
@@ -53,7 +53,7 @@
           },
           "conditions": [
             {
-              "id": "1e2882be-7f75-41af-97df-3e7621d4e2f9",
+              "id": "your_condition_id",
               "leftValue": "={{ $json.Percentage }}",
               "rightValue": 50,
               "operator": {
@@ -72,7 +72,7 @@
         -32,
         0
       ],
-      "id": "b6e168a4-3b4d-437d-ac0b-0599d4df2f15",
+      "id": "your_node_id_2",
       "name": "If"
     },
     {
@@ -80,17 +80,17 @@
         "operation": "create",
         "base": {
           "__rl": true,
-          "value": "app4j6wLzKny0cExt",
+          "value": "your_airtable_base_id",
           "mode": "list",
           "cachedResultName": "admession_form",
-          "cachedResultUrl": "https://airtable.com/app4j6wLzKny0cExt"
+          "cachedResultUrl": "your_cached_airtable_base_url"
         },
         "table": {
           "__rl": true,
-          "value": "tblCOhUZ6aikXGdgm",
+          "value": "your_airtable_table_id_1",
           "mode": "list",
           "cachedResultName": "Above49",
-          "cachedResultUrl": "https://airtable.com/app4j6wLzKny0cExt/tblCOhUZ6aikXGdgm"
+          "cachedResultUrl": "your_cached_airtable_table_url_1"
         },
         "columns": {
           "mappingMode": "autoMapInputData",
@@ -175,11 +175,11 @@
         384,
         -96
       ],
-      "id": "4523a60a-77fd-46f4-a14f-049b562f1916",
+      "id": "your_node_id_3",
       "name": "Create a record",
       "credentials": {
         "airtableTokenApi": {
-          "id": "ycxOjwX1xkVNpsI2",
+          "id": "your_credential_id_2",
           "name": "Airtable Personal Access Token account"
         }
       }
@@ -189,17 +189,17 @@
         "operation": "create",
         "base": {
           "__rl": true,
-          "value": "app4j6wLzKny0cExt",
+          "value": "your_airtable_base_id",
           "mode": "list",
           "cachedResultName": "admession_form",
-          "cachedResultUrl": "https://airtable.com/app4j6wLzKny0cExt"
+          "cachedResultUrl": "your_cached_airtable_base_url"
         },
         "table": {
           "__rl": true,
-          "value": "tblWSKHFcscrHMmTP",
+          "value": "your_airtable_table_id_2",
           "mode": "list",
           "cachedResultName": "Table 1",
-          "cachedResultUrl": "https://airtable.com/app4j6wLzKny0cExt/tblWSKHFcscrHMmTP"
+          "cachedResultUrl": "your_cached_airtable_table_url_2"
         },
         "columns": {
           "mappingMode": "autoMapInputData",
@@ -284,11 +284,11 @@
         -32,
         -128
       ],
-      "id": "acaaeafc-5234-47ef-ae77-f8ac51839710",
+      "id": "your_node_id_4",
       "name": "Create a record1",
       "credentials": {
         "airtableTokenApi": {
-          "id": "ycxOjwX1xkVNpsI2",
+          "id": "your_credential_id_3",
           "name": "Airtable Personal Access Token account"
         }
       }
@@ -298,17 +298,17 @@
         "operation": "create",
         "base": {
           "__rl": true,
-          "value": "app4j6wLzKny0cExt",
+          "value": "your_airtable_base_id",
           "mode": "list",
           "cachedResultName": "admession_form",
-          "cachedResultUrl": "https://airtable.com/app4j6wLzKny0cExt"
+          "cachedResultUrl": "your_cached_airtable_base_url"
         },
         "table": {
           "__rl": true,
-          "value": "tbleawlYi3dUeNJCB",
+          "value": "your_airtable_table_id_3",
           "mode": "list",
           "cachedResultName": "Below50",
-          "cachedResultUrl": "https://airtable.com/app4j6wLzKny0cExt/tbleawlYi3dUeNJCB"
+          "cachedResultUrl": "your_cached_airtable_table_url_3"
         },
         "columns": {
           "mappingMode": "autoMapInputData",
@@ -393,11 +393,11 @@
         384,
         80
       ],
-      "id": "d5df23fd-63de-4c9d-bf23-65ea07ee5542",
+      "id": "your_node_id_5",
       "name": "Create a record2",
       "credentials": {
         "airtableTokenApi": {
-          "id": "ycxOjwX1xkVNpsI2",
+          "id": "your_credential_id_4",
           "name": "Airtable Personal Access Token account"
         }
       }
@@ -420,7 +420,7 @@
         176,
         -96
       ],
-      "id": "63f0807e-4ead-41e6-be42-d5142b594cff",
+      "id": "your_node_id_6",
       "name": "Sort"
     },
     {
@@ -441,7 +441,7 @@
         160,
         64
       ],
-      "id": "4535bb53-7292-4bb7-9479-114e725e1e63",
+      "id": "your_node_id_7",
       "name": "Sort1"
     },
     {
@@ -462,7 +462,7 @@
         -240,
         -112
       ],
-      "id": "4a069cae-da45-458a-8b3f-fa4e1bb43667",
+      "id": "your_node_id_8",
       "name": "Sort2"
     }
   ],
@@ -540,11 +540,11 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "ffabde58-a03e-466c-afb8-0b78b4b1ee56",
+  "versionId": "your_version_id",
   "meta": {
     "templateCredsSetupCompleted": true,
-    "instanceId": "fdc8fab62e3c31065a2575beb7a0f562db058fd8d0a135f822305e5e1bbbe6ea"
+    "instanceId": "your_instance_id"
   },
-  "id": "6JFQdpmOqD94RMho",
+  "id": "your_workflow_id",
   "tags": []
 }
