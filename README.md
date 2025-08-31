@@ -31,7 +31,7 @@ This repository contains a collection of my automation projects built with n8n. 
 ## Images
 1. ![images](./images/workflow.png)
 2. ![images](./images/google_sheet.png)
-3. ![images](./images/air_table_all_datat.png)
+3. ![images](./images/air_table_all_data.png)
 4. ![images](./images/air_table_above50.png)
 5. ![images](./images/air_table_below50.png)
 
