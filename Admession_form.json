@@ -1,0 +1,550 @@
+{
+  "name": "Admession_form",
+  "nodes": [
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyHour"
+            }
+          ]
+        },
+        "documentId": {
+          "__rl": true,
+          "value": "1XaOypeT98iYZN_OeiO1fpKEm39iQzgeP1HAcnKt5Aqw",
+          "mode": "list",
+          "cachedResultName": "Admession form",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1XaOypeT98iYZN_OeiO1fpKEm39iQzgeP1HAcnKt5Aqw/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 2021132928,
+          "mode": "list",
+          "cachedResultName": "Below50%",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1XaOypeT98iYZN_OeiO1fpKEm39iQzgeP1HAcnKt5Aqw/edit#gid=2021132928"
+        },
+        "event": "rowAdded",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheetsTrigger",
+      "typeVersion": 1,
+      "position": [
+        -256,
+        0
+      ],
+      "id": "97b877ff-1c60-48d6-a166-5507a43511e0",
+      "name": "Google Sheets Trigger",
+      "credentials": {
+        "googleSheetsTriggerOAuth2Api": {
+          "id": "uhiRm3wlbULuIr4A",
+          "name": "Google Sheets Trigger account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "1e2882be-7f75-41af-97df-3e7621d4e2f9",
+              "leftValue": "={{ $json.Percentage }}",
+              "rightValue": 50,
+              "operator": {
+                "type": "number",
+                "operation": "gte"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -32,
+        0
+      ],
+      "id": "b6e168a4-3b4d-437d-ac0b-0599d4df2f15",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "base": {
+          "__rl": true,
+          "value": "app4j6wLzKny0cExt",
+          "mode": "list",
+          "cachedResultName": "admession_form",
+          "cachedResultUrl": "https://airtable.com/app4j6wLzKny0cExt"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblCOhUZ6aikXGdgm",
+          "mode": "list",
+          "cachedResultName": "Above49",
+          "cachedResultUrl": "https://airtable.com/app4j6wLzKny0cExt/tblCOhUZ6aikXGdgm"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Full Name",
+              "displayName": "Full Name",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Father Name",
+              "displayName": "Father Name",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Email Address",
+              "displayName": "Email Address",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "10th Obt mark",
+              "displayName": "10th Obt mark",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Percentage",
+              "displayName": "Percentage",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Address",
+              "displayName": "Address",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        384,
+        -96
+      ],
+      "id": "4523a60a-77fd-46f4-a14f-049b562f1916",
+      "name": "Create a record",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "ycxOjwX1xkVNpsI2",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "base": {
+          "__rl": true,
+          "value": "app4j6wLzKny0cExt",
+          "mode": "list",
+          "cachedResultName": "admession_form",
+          "cachedResultUrl": "https://airtable.com/app4j6wLzKny0cExt"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblWSKHFcscrHMmTP",
+          "mode": "list",
+          "cachedResultName": "Table 1",
+          "cachedResultUrl": "https://airtable.com/app4j6wLzKny0cExt/tblWSKHFcscrHMmTP"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Full Name",
+              "displayName": "Full Name",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Father Name",
+              "displayName": "Father Name",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Email Address",
+              "displayName": "Email Address",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "10th Obt mark",
+              "displayName": "10th Obt mark",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Percentage",
+              "displayName": "Percentage",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Address",
+              "displayName": "Address",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        -32,
+        -128
+      ],
+      "id": "acaaeafc-5234-47ef-ae77-f8ac51839710",
+      "name": "Create a record1",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "ycxOjwX1xkVNpsI2",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "base": {
+          "__rl": true,
+          "value": "app4j6wLzKny0cExt",
+          "mode": "list",
+          "cachedResultName": "admession_form",
+          "cachedResultUrl": "https://airtable.com/app4j6wLzKny0cExt"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tbleawlYi3dUeNJCB",
+          "mode": "list",
+          "cachedResultName": "Below50",
+          "cachedResultUrl": "https://airtable.com/app4j6wLzKny0cExt/tbleawlYi3dUeNJCB"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Full Name",
+              "displayName": "Full Name",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Father Name",
+              "displayName": "Father Name",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Email Address",
+              "displayName": "Email Address",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "10th Obt mark",
+              "displayName": "10th Obt mark",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Percentage",
+              "displayName": "Percentage",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Address",
+              "displayName": "Address",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        384,
+        80
+      ],
+      "id": "d5df23fd-63de-4c9d-bf23-65ea07ee5542",
+      "name": "Create a record2",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "ycxOjwX1xkVNpsI2",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sortFieldsUi": {
+          "sortField": [
+            {
+              "fieldName": "Percentage",
+              "order": "descending"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.sort",
+      "typeVersion": 1,
+      "position": [
+        176,
+        -96
+      ],
+      "id": "63f0807e-4ead-41e6-be42-d5142b594cff",
+      "name": "Sort"
+    },
+    {
+      "parameters": {
+        "sortFieldsUi": {
+          "sortField": [
+            {
+              "fieldName": "Percentage",
+              "order": "descending"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.sort",
+      "typeVersion": 1,
+      "position": [
+        160,
+        64
+      ],
+      "id": "4535bb53-7292-4bb7-9479-114e725e1e63",
+      "name": "Sort1"
+    },
+    {
+      "parameters": {
+        "sortFieldsUi": {
+          "sortField": [
+            {
+              "fieldName": "Percentage",
+              "order": "descending"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.sort",
+      "typeVersion": 1,
+      "position": [
+        -240,
+        -112
+      ],
+      "id": "4a069cae-da45-458a-8b3f-fa4e1bb43667",
+      "name": "Sort2"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Google Sheets Trigger": {
+      "main": [
+        [
+          {
+            "node": "Sort2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Sort",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Sort1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sort": {
+      "main": [
+        [
+          {
+            "node": "Create a record",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sort1": {
+      "main": [
+        [
+          {
+            "node": "Create a record2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sort2": {
+      "main": [
+        [
+          {
+            "node": "Create a record1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "ffabde58-a03e-466c-afb8-0b78b4b1ee56",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "fdc8fab62e3c31065a2575beb7a0f562db058fd8d0a135f822305e5e1bbbe6ea"
+  },
+  "id": "6JFQdpmOqD94RMho",
+  "tags": []
+}
