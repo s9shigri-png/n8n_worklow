@@ -8,7 +8,7 @@ This repository contains a collection of my automation projects built with n8n. 
 
 ### 1. Automated Student Admission Workflow
 
-* **Workflow Name:** `Admession_form.json
+* **Workflow Name:** `Merit-Based Student Sorter'
 * **Problem:** Colleges and schools need an efficient way to filter student applications from a Google Sheet based on their academic performance, specifically to identify those who qualify for a written admission test.
 * **Solution:** This workflow automates the entire process. It reads student data from a Google Sheet, applies a conditional check to sort applicants based on their percentage (above or below 50%), and automatically stores the categorized records in separate Airtable tables. This saves significant time and eliminates manual errors in the admissions process.
 * **Skills Demonstrated:**
