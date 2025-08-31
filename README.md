@@ -8,7 +8,7 @@ This repository contains a collection of my automation projects built with n8n. 
 
 ### 1. Automated Student Admission Workflow
 
-* **Workflow Name:** `student_admission_workflow.json` (Make sure to upload the JSON file of your workflow to this repository)
+* **Workflow Name:** `Admession_form.json
 * **Problem:** Colleges and schools need an efficient way to filter student applications from a Google Sheet based on their academic performance, specifically to identify those who qualify for a written admission test.
 * **Solution:** This workflow automates the entire process. It reads student data from a Google Sheet, applies a conditional check to sort applicants based on their percentage (above or below 50%), and automatically stores the categorized records in separate Airtable tables. This saves significant time and eliminates manual errors in the admissions process.
 * **Skills Demonstrated:**
@@ -22,12 +22,14 @@ This repository contains a collection of my automation projects built with n8n. 
 
 ## How to Use These Workflows
 
-1.  **Clone the repository:** `git clone [your_repo_link]`
+1.  **Clone the repository:** (https://github.com/s9shigri-png/n8n_worklow)`
 2.  **Open n8n:** Import the desired `.json` workflow file from the repository into your n8n instance.
 3.  **Configure Credentials:** Update the credentials for Google Sheets and Airtable with your own API keys.
 4.  **Run:** Execute the workflow to see the automation in action.
 
 ---
+## Images
+1. ![images](./images/workflow.png)
 
 ## Contact
 Feel free to connect with me to discuss these projects or other automation solutions.
