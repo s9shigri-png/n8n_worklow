@@ -30,6 +30,7 @@ This repository contains a collection of my automation projects built with n8n. 
 ---
 ## Images
 1. ![images](./images/workflow.png)
+2. ![images](./images/google_sheet.png)
 
 ## Contact
 Feel free to connect with me to discuss these projects or other automation solutions.
